@@ -1,0 +1,74 @@
+/* Establecemos el color de fondo y la fuente para toda la página */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Damos estilo a la barra de navegación */
+header nav {
+  background-color: #333;
+  color: #fff;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Damos estilo a las secciones de la página */
+main section {
+  padding: 20px;
+}
+main section h1, h2 {
+  text-align: center;
+}
+main section p {
+  line-height: 1.5;
+}
+main section img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Damos estilo al formulario de contacto */
+main section#contact form {
+  text-align: center;
+}
+main section#contact form label {
+  display: block;
+  margin-bottom: 10px;
+}
+main section#contact form input[type="text"],
+main section#contact form input[type="email"],
+main section#contact form textarea {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+main section#contact form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* Damos estilo al pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
