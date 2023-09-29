@@ -6,12 +6,13 @@
     <title>Primer reto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="./script.js"></script>
   </head>
 
   <body class="p-3 m-0 border-0 bd-example m-0 border-0">
     <h1 class="display-1">Calcula una propina justa</h1>
     <div class="col-4 position-relative ">
-      <form class="row g-3 needs-validation form-inline " novalidate="" onsubmit="return validarFormulari(); propina(); ">
+      <form name="form1" class="row g-3 needs-validation form-inline " novalidate="" onsubmit="return validarFormulari(); propina(); ">
 
         <div>
           <label class="form-label" for="comensales">Cuantos somos?:</label>
@@ -62,66 +63,9 @@
 
     </div>
     
-    <script>
-
-function validarFormulari() {
-
-let comensales = document.getElementById("comensales").value;
-let factura = document.getElementById("factura").value;
-let opinion = document.getElementById("opinion").value;
-let genial = 10;
-let aceptable = 5;
-let horrible = 0;
-
-if (comensales === "") {
-  comensales = 1;
-}
-// Realiza la validación programática de los datos
-if (comensales === "" || factura === "" || opinion === "") {
-
-  alert("RELLENA TODOS LOS CAMPOS MELÓN!");
-  return false;
-}
-
-// Muestra una ventana de confirmación
-let confirmacion = confirm("Los datos que has introducido son:\n\nComensales: " + comensales + "\nTotal Factura: " + factura + "\nOpinión: " + opinion + "\n\n¿Quieres continuar?");
-
-if (confirmacion) {
-  // Borra el contenido de los campos
-  document.getElementById("comensales").value = "";
-  document.getElementById("factura").value = "";
-  document.getElementById("opinion").value = "";
-
-  alert("Datos enviados correctamente!");
-}
-let propina;
-
-if (opinion == 10) {
-  propina = genial * factura / 100;
-} else if (opinion == 5) {
-
-  propina = aceptable * factura / 100;
+ 
 
 
-} else if (opinion == 0) {
-  propina = 0.5 * comensales;
-
-}
-let propinaMinima = comensales * 0.5;
-if (propina < propinaMinima) {
-  window.alert(" Se establecera la propina minima por persona , que es 0.5 euros por persona");
-  propina = 0.5 * comensales;
-}
-//window.alert("La propina a pagar es " + propina + " euros");
-var elemento = document.getElementById("propinaTotalp");
-propinaTotalp.innerHTML = "La propina total a pagar es " + propina + " euros"+"\nPropina por persona : "+propina/comensales + " euros";
-
-
-return false;
-}
-
-
-    </script>
   
   </body>
 
