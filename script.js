@@ -7,6 +7,7 @@ function validarFormulari() {
      let comensales = document.forms.form1.comensales.value;  
      let factura = document.forms.form1.factura.value;
      let opinion = document.forms.form1.opinion.value;
+   
     let aceptable = 5;
     let horrible = 0;
     
@@ -51,7 +52,8 @@ function validarFormulari() {
     }
     //window.alert("La propina a pagar es " + propina + " euros");
     let elemento = document.getElementById("propinaTotalp");
-    propinaTotalp.innerHTML = "La propina total a pagar es " + propina + " euros"+"\nPropina por persona : "+propina/comensales + "euros";
+    let propinaporP = propina/comensales;
+    propinaTotalp.innerHTML = "La propina total a pagar es " + propina.toFixed(2) + " euros"+"\nPropina por persona : "+propinaporP.toFixed(2) + "euros";
     
     
     return false;
